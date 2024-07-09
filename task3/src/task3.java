@@ -9,7 +9,7 @@ public class task3 {
 
     public static void main(String[] args) throws FileNotFoundException {
         if (args.length < 3) {
-            System.out.println("Usage: java task3 <values_file_path> <tests_file_path> <report_file_path>");
+            System.out.println("Usage: java task3.java <values_file_path> <tests_file_path> <report_file_path>");
             return;
         }
 

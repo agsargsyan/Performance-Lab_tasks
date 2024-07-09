@@ -7,7 +7,7 @@ public class task4 {
 
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("Usage: java task4 <input_file_path>");
+            System.out.println("Usage: java task4.java <input_file_path>");
             return;
         }
 

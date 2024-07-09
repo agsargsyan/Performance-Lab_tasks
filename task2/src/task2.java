@@ -6,7 +6,7 @@ public class task2 {
 
     public static void main(String[] args) throws IOException {
         if (args.length < 2) {
-            System.out.println("Usage: java task2 <circle_file_path> <points_file_path>");
+            System.out.println("Usage: java task2.java <circle_file_path> <points_file_path>");
             return;
         }
 

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class task1 {
     public static void main(String[] args) {
         if (args.length < 2) {
-            System.out.println("Usage: java task1 <array_size> <path_length>");
+            System.out.println("Usage: java task1.java <array_size> <path_length>");
             return;
         }
         
