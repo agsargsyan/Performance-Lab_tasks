@@ -3,9 +3,15 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class task2 {
+
     public static void main(String[] args) throws IOException {
-        String circleFile = "src\\file1.txt";
-        String pointsFile = "src\\file2.txt";
+        if (args.length < 2) {
+            System.out.println("Usage: java task2 <circle_file_path> <points_file_path>");
+            return;
+        }
+
+        String circleFile = args[0];
+        String pointsFile = args[1];
 
         Circle circle = readCircleData(circleFile);
         Point[] points = readPointsData(pointsFile);
@@ -13,7 +19,6 @@ public class task2 {
         for (Point point : points) {
             System.out.println(determinePosition(circle, point));
         }
-
     }
 
     private static Circle readCircleData(String filePath) throws IOException {
@@ -40,8 +45,7 @@ public class task2 {
     }
 
     private static int determinePosition(Circle circle, Point point) {
-        double distance =
-                Math.sqrt(Math.pow(point.x - circle.x, 2) + Math.pow(point.y - circle.y, 2));
+        double distance = Math.sqrt(Math.pow(point.x - circle.x, 2) + Math.pow(point.y - circle.y, 2));
         if (distance == circle.radius) {
             return 0;
         } else if (distance < circle.radius) {
@@ -70,3 +74,4 @@ public class task2 {
         }
     }
 }
+

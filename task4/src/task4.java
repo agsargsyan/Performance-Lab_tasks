@@ -6,7 +6,12 @@ import java.util.Arrays;
 public class task4 {
 
     public static void main(String[] args) {
-        String inputFile = "src\\data.txt";
+        if (args.length < 1) {
+            System.out.println("Usage: java task4 <input_file_path>");
+            return;
+        }
+
+        String inputFile = args[0];
         int[] nums = readIntArrayFromFile(inputFile);
         int minMoves = minMoves(nums);
         System.out.println("Минимальное количество ходов: " + minMoves);
@@ -44,3 +49,4 @@ public class task4 {
         return minMoves;
     }
 }
+
